@@ -1,0 +1,25 @@
+#windowbody button {
+    margin: 1em;
+    padding: 0.5em;
+}
+
+#windowbody entry {
+    margin: 1em;
+    padding: 0.5em;
+}
+
+.collegeinputbox scale {
+    min-width: 200px;
+}
+
+.collegeinputbox#exampleinput {
+    font-style: italic;
+}
+
+#resultsgrid label button {
+    padding: 12em;
+}
+
+#xlabelheader, #vlabelheader {
+    font-weight: bold;
+}
