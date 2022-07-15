@@ -17,7 +17,7 @@ Here’s an example:
 
 In this example, we have three schools: Insincere University with a 4% chance of admission and utility value of 21, Qualitative University with a 6% chance of admission and utility value of 16, and Absolute Conservatory with a 20% change of admission and utility value of 5. Relatively speaking, Absolute Conservatory is a “safety school” while the others are “reach schools.”
 
-The output sorts the schools in the order Absolute Conservatory, Qualitative University, Insincere University. This means that if you only have time to apply to one college, it should be Absolute Conservatory, and if you can only apply to two colleges, you should pick Absolute Conservatory and Qualitative University. The **Cumulative utility** column tells you the expected utility associated with that school and the schools above it. 
+The output sorts the schools in the order Absolute Conservatory, Qualitative University, Insincere University. This means that if you only have time to apply to one college, it should be Absolute Conservatory, and if you can only apply to two colleges, you should pick Absolute Conservatory and Qualitative University. The **Cumulative utility** column tells you the expected utility associated with applying to that school and the schools above it. 
 
 ## Installation
 
