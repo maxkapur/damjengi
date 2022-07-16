@@ -62,6 +62,7 @@ def left_justified_label(s):
     label.set_justify(Gtk.Justification.LEFT)
     return label
 
+
 class MainWindow(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -70,8 +71,6 @@ class MainWindow(Gtk.ApplicationWindow):
         GLib.set_application_name("Damjengi College Application Strategist")
 
         self.init_css("style.css")
-
-
 
         # Width is 12
         self.window_body = Gtk.Grid()
@@ -223,21 +222,26 @@ class MainWindow(Gtk.ApplicationWindow):
         self.about.set_authors(["Max Kapur"])
         self.about.set_copyright("ⓒ 2022 Max Kapur")
         self.about.set_license_type(Gtk.License.GPL_3_0)
-        self.about.set_website("https://maxkapur.com")
-        self.about.set_website_label("maxkapur.com")
+        self.about.set_website("https://github.com/maxkapur/damjengi")
+        self.about.set_website_label("github.com/maxkapur/damjengi")
         self.about.set_version("0.1.0")
+
+        logo = Gtk.Image.new_from_file("logo.png")
+        
+        self.about.set_logo(logo.get_paintable())
         self.about.show()
 
 
 class Damjengi(Adw.Application):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.connect('activate', self.on_activate)
+        self.connect("activate", self.on_activate)
 
     def on_activate(self, app):
         self.win = MainWindow(application=app)
         self.win.present()
 
 
-app = Damjengi(application_id="com.maxkapur.damjengi")
-app.run(sys.argv)
+if __name__ == "__main__":
+    app = Damjengi(application_id="com.maxkapur.damjengi")
+    app.run(sys.argv)

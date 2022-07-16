@@ -1,3 +1,5 @@
+![The Damjengi logo, a stylized ivy leaf](logo.png)
+
 # Damjengi
 … is a graphical college application strategist for GNU/Linux built using 
 GTK and Python. 
