@@ -72,10 +72,14 @@ class MainWindow(Gtk.ApplicationWindow):
 
         self.init_css("style.css")
 
-        # Width is 12
+        # Grid width is 12
         self.window_body = Gtk.Grid()
         self.window_body.set_name("windowbody")
-        self.set_child(self.window_body)
+
+        # Scrollable
+        scrolled = Gtk.ScrolledWindow()
+        scrolled.set_child(self.window_body)
+        self.set_child(scrolled)
 
         self.init_add_remove_buttons()
         self.init_example_college()
@@ -87,13 +91,13 @@ class MainWindow(Gtk.ApplicationWindow):
             0, 20, 12, 1
         )
 
-        self.compute_button = Gtk.Button(label="Compute application order")
-        self.compute_button.connect("clicked", self.compute_application_order)
-        self.window_body.attach(self.compute_button, 2, 40, 8, 1)
+        compute_button = Gtk.Button(label="Compute application order")
+        compute_button.connect("clicked", self.compute_application_order)
+        self.window_body.attach(compute_button, 2, 40, 8, 1)
 
-        self.about_button = Gtk.Button(label="About Damjengi")
-        self.about_button.connect("clicked", self.show_about)
-        self.window_body.attach(self.about_button, 3, 50, 6, 1)
+        about_button = Gtk.Button(label="About Damjengi")
+        about_button.connect("clicked", self.show_about)
+        self.window_body.attach(about_button, 3, 50, 6, 1)
 
 
     def init_css(self, relative_path):
